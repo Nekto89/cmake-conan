@@ -1,6 +1,10 @@
-#include "fmt/color.h"
+#include <iostream>
+
+#include <unicode/unistr.h>
 
 int main() {
-    fmt::print(fg(fmt::terminal_color::cyan), "Hello fmt {}!\n", FMT_VERSION );
+    auto ucs = icu::UnicodeString::fromUTF8(icu::StringPiece("test"));
+    std::string result;
+    std::cout << ucs.toUTF8String(result) << std::endl;
     return 0;
 }
