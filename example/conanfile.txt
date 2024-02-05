@@ -1,5 +1,5 @@
 [requires]
-fmt/9.1.0
+libpng/1.6.40
 
 [layout]
 cmake_layout
