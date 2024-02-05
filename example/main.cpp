@@ -1,6 +1,12 @@
-#include "fmt/color.h"
+#include <oneapi/tbb/parallel_for.h>
+
+#include <atomic>
 
 int main() {
-    fmt::print(fg(fmt::terminal_color::cyan), "Hello fmt {}!\n", FMT_VERSION );
+    std::atomic<int> counter{};
+    oneapi::tbb::parallel_for(std::size_t(0), std::size_t(1), [&](std::size_t) {
+        ++counter;
+    }, oneapi::tbb::simple_partitioner());
+    
     return 0;
 }

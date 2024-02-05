@@ -1,5 +1,5 @@
 [requires]
-fmt/9.1.0
+onetbb/2021.9.0
 
 [layout]
 cmake_layout
