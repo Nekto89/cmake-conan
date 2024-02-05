@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.24)
 
-project(FormatOutput LANGUAGES CXX)
+project(FormatOutput LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 
